@@ -1,0 +1,1 @@
+ALTER TABLE `model_output` CHANGE COLUMN `yesterday_actual` `Yesterday_Actual` VARCHAR(255) NOT NULL;
