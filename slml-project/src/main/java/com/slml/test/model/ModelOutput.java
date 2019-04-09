@@ -14,7 +14,7 @@ public class ModelOutput {
 	private long time_stamp;
 	private String security_name;
 	private String ISIN;
-	private double yesterday_actual;
+	private double Yesterday_Actual;
 	private double NGT_PUBLISHED;
 	private double Model_Now;
 	private double Model_EoD;
@@ -33,7 +33,7 @@ public class ModelOutput {
 		this.time_stamp = time_stamp;
 		this.security_name = security_name;
 		ISIN = iSIN;
-		this.yesterday_actual = yesterday_actual;
+		this.Yesterday_Actual = yesterday_actual;
 		NGT_PUBLISHED = nGT_PUBLISHED;
 		Model_Now = model_Now;
 		Model_EoD = model_EoD;
@@ -73,10 +73,10 @@ public class ModelOutput {
 		ISIN = iSIN;
 	}
 	public double getYesterday_actual() {
-		return yesterday_actual;
+		return Yesterday_Actual;
 	}
 	public void setYesterday_actual(double yesterday_actual) {
-		this.yesterday_actual = yesterday_actual;
+		this.Yesterday_Actual = yesterday_actual;
 	}
 	public double getNGT_PUBLISHED() {
 		return NGT_PUBLISHED;
