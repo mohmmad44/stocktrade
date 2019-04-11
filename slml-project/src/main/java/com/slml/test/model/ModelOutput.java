@@ -1,83 +1,128 @@
 package com.slml.test.model;
 
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="model_output")
 public class ModelOutput {
-	private long time_stamp;
-	private String security_name;
-	private String ISIN;
-	private double yesterday_actual;
-	private double Yesterday_Actual;
-	private double NGT_PUBLISHED;
-	private double Model_Now;
-	private double model_EoD;
 	
-	public ModelOutput() {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id" , nullable = false)
+	private Integer id;
+	
+	@Column(name="date_Str", length=30, nullable = false)
+	private String dateStr;
+	
+	@Column(name="time_stamp",length=30, nullable = false)
+	private String timeStamp;
+	
+	@Column(name="security_name", length=255, nullable = false)
+	private String securityName;
+	
+	@Column(name="ISIN", length=30, nullable = false)
+	private String isin;
+	
+	@Column(name="Yesterday_Actual", length=255, nullable = false)
+	private BigDecimal yesterdayActual;
+	
+	@Column(name="NGT_PUBLISHED",columnDefinition="decimal" , precision=20, scale=5, nullable = false)
+	private BigDecimal ngtPublished;
+	
+	@Column(name="Model_Now",columnDefinition="decimal" , precision=20, scale=5, nullable = false)
+	private BigDecimal modelNow;
+	
+	@Column(name="Model_EoD",columnDefinition="decimal" , precision=20, scale=5, nullable = false)
+	private BigDecimal modelEoD;
+	
+	
+	
+	
+	
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getDateStr() {
+		return dateStr;
+	}
+
+	public void setDateStr(String dateStr) {
+		this.dateStr = dateStr;
+	}
+
+	public String getTimeStamp() {
+		return timeStamp;
+	}
+
+	public void setTimeStamp(String timeStamp) {
+		this.timeStamp = timeStamp;
+	}
+
+	public String getSecurityName() {
+		return securityName;
+	}
+
+	public void setSecurityName(String securityName) {
+		this.securityName = securityName;
+	}
+
+	public String getIsin() {
+		return isin;
+	}
+
+	public void setIsin(String isin) {
+		this.isin = isin;
+	}
+
+	public BigDecimal getYesterdayActual() {
+		return yesterdayActual;
+	}
+
+	public void setYesterdayActual(BigDecimal yesterdayActual) {
+		this.yesterdayActual = yesterdayActual;
+	}
+
+	public BigDecimal getNgtPublished() {
+		return ngtPublished;
+	}
+
+	public void setNgtPublished(BigDecimal ngtPublished) {
+		this.ngtPublished = ngtPublished;
+	}
+
+	public BigDecimal getModelNow() {
+		return modelNow;
+	}
+
+	public void setModelNow(BigDecimal modelNow) {
+		this.modelNow = modelNow;
+	}
+
+	public BigDecimal getModelEoD() {
+		return modelEoD;
+	}
+
+	public void setModelEoD(BigDecimal modelEoD) {
+		this.modelEoD = modelEoD;
+	}
+	
 		
-	}
+
+
 	
-	
-	public ModelOutput(long time_stamp, String security_name, String iSIN, double yesterday_actual,
-			double yesterday_Actual2, double nGT_PUBLISHED, double model_Now, double model_EoD) {
-		super();
-		this.time_stamp = time_stamp;
-		this.security_name = security_name;
-		ISIN = iSIN;
-		this.yesterday_actual = yesterday_actual;
-		Yesterday_Actual = yesterday_Actual2;
-		NGT_PUBLISHED = nGT_PUBLISHED;
-		Model_Now = model_Now;
-		this.model_EoD = model_EoD;
-	}
-	
-	
-	
-	public long getTime_stamp() {
-		return time_stamp;
-	}
-	public void setTime_stamp(long time_stamp) {
-		this.time_stamp = time_stamp;
-	}
-	public String getSecurity_name() {
-		return security_name;
-	}
-	public void setSecurity_name(String security_name) {
-		this.security_name = security_name;
-	}
-	public String getISIN() {
-		return ISIN;
-	}
-	public void setISIN(String iSIN) {
-		ISIN = iSIN;
-	}
-	public double getYesterday_actual() {
-		return yesterday_actual;
-	}
-	public void setYesterday_actual(double yesterday_actual) {
-		this.yesterday_actual = yesterday_actual;
-	}
-	public double getYesterday_Actual() {
-		return Yesterday_Actual;
-	}
-	public void setYesterday_Actual(double yesterday_Actual) {
-		Yesterday_Actual = yesterday_Actual;
-	}
-	public double getNGT_PUBLISHED() {
-		return NGT_PUBLISHED;
-	}
-	public void setNGT_PUBLISHED(double nGT_PUBLISHED) {
-		NGT_PUBLISHED = nGT_PUBLISHED;
-	}
-	public double getModel_Now() {
-		return Model_Now;
-	}
-	public void setModel_Now(double model_Now) {
-		Model_Now = model_Now;
-	}
-	public double getModel_EoD() {
-		return model_EoD;
-	}
-	public void setModel_EoD(double model_EoD) {
-		this.model_EoD = model_EoD;
-	}
 	
 	
 	
