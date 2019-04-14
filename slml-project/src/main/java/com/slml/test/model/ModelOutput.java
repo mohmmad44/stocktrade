@@ -31,7 +31,7 @@ public class ModelOutput {
 	private String isin;
 	
 	@Column(name="Yesterday_Actual", length=255, nullable = false)
-	private BigDecimal yesterdayActual;
+	private String yesterdayActual;
 	
 	@Column(name="NGT_PUBLISHED",columnDefinition="decimal" , precision=20, scale=5, nullable = false)
 	private BigDecimal ngtPublished;
@@ -87,11 +87,11 @@ public class ModelOutput {
 		this.isin = isin;
 	}
 
-	public BigDecimal getYesterdayActual() {
+	public String getYesterdayActual() {
 		return yesterdayActual;
 	}
 
-	public void setYesterdayActual(BigDecimal yesterdayActual) {
+	public void setYesterdayActual(String yesterdayActual) {
 		this.yesterdayActual = yesterdayActual;
 	}
 

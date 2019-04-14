@@ -22,13 +22,13 @@ public class AspectLogging {
 	 */
 	@Before("execution(* com.slml.test.*.*.*(..))")
 	public void before(JoinPoint joinPoint) {
-		logger.info("Entering this Method" + joinPoint.getSignature().getName());
+		logger.info("Entering this Method>>>>>>>>>>>>  " + joinPoint.getSignature().getName());
 		
 	}
 	
 	@After("execution(* com.slml.test.*.*.*(..))")
 	public void after(JoinPoint joinPoint) {
-		logger.info("Exiting this Method" + joinPoint.getSignature().getName());
+		logger.info("Exiting this Method>>>>>>>>>>>>>>> " + joinPoint.getSignature().getName());
 	}
 	
 	@AfterThrowing("execution(* com.slml.test.services.*.*(..))")

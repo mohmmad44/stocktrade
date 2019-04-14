@@ -16,7 +16,7 @@ public class SlmlDTO {
 
 	private String isin;
 
-	private BigDecimal yesterdayActual;
+	private String yesterdayActual;
 
 	private BigDecimal ngtPublished;
 
@@ -70,11 +70,11 @@ public class SlmlDTO {
 		this.isin = isin;
 	}
 
-	public BigDecimal getYesterdayActual() {
+	public String getYesterdayActual() {
 		return yesterdayActual;
 	}
 
-	public void setYesterdayActual(BigDecimal yesterdayActual) {
+	public void setYesterdayActual(String yesterdayActual) {
 		this.yesterdayActual = yesterdayActual;
 	}
 

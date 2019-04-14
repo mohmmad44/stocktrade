@@ -1,5 +1,6 @@
 server:
   port: 9090
+  context-path: /testservice
   
 spring:  datasource:    url: jdbc:mysql://localhost:3306/localslmldb?useSSL=false
     username: root
