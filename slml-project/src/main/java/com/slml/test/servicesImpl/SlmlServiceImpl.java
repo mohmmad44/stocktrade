@@ -55,12 +55,36 @@ public class SlmlServiceImpl implements Services {
 
 		return slmlDtoList;
 	}
-	
-	public void saveDto(SlmlDTO slmlDto) {
+
+
+	public SlmlDTO getsecurities(Integer id) {
+
 		
+
+		ModelOutput modelOut = slmlRepository.findOne(id);
+				SlmlDTO dto = new SlmlDTO();
+
+					LOG.info("Security name::::::" + modelOut.getSecurityName());
+					dto.setDateStr(modelOut.getDateStr());
+					dto.setId(modelOut.getId());
+					dto.setIsin(modelOut.getIsin());
+					dto.setModelEoD(modelOut.getModelEoD());
+					dto.setTimeStamp(modelOut.getTimeStamp());
+					dto.setSecurityName(modelOut.getSecurityName());
+					dto.setYesterdayActual(modelOut.getYesterdayActual());
+					dto.setNgtPublished(modelOut.getNgtPublished());
+					dto.setModelNow(modelOut.getModelNow());
+					
+					return dto;
+				}
+
+		
+
+	public void saveDto(SlmlDTO slmlDto) {
+
 		ModelOutput modeloutput = new ModelOutput();
 		modeloutput.setDateStr(slmlDto.getDateStr());
-		
+
 		modeloutput.setIsin(slmlDto.getIsin());
 		modeloutput.setModelEoD(slmlDto.getModelEoD());
 		modeloutput.setTimeStamp(slmlDto.getTimeStamp());
@@ -72,8 +96,12 @@ public class SlmlServiceImpl implements Services {
 	}
 
 	public void deleteSecurity(Integer id) {
-		slmlRepository.delete(id);;
-		
+		slmlRepository.delete(id);
+
 	}
+
+
+
+
 
 }
